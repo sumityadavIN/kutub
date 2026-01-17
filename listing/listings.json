@@ -1,0 +1,20 @@
+[
+    {
+        "id": "dlf-the-belaire",
+        "file": "dlf-the-belaire.html",
+        "title": "DLF The Belaire",
+        "status": "READY TO MOVE",
+        "location": "Golf Course Road",
+        "type": "4 BHK Luxury",
+        "image": "images/property-01.jpg"
+    },
+    {
+        "id": "dlf-the-crest",
+        "file": "dlf-the-crest.html",
+        "title": "DLF The Crest",
+        "status": "UNDER CONSTRUCTION",
+        "location": "Park Drive",
+        "type": "Penthouse Collection",
+        "image": "images/property-02.jpg"
+    }
+]

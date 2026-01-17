@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLF The Belaire | Kutub Estate</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;500;600;700&family=Syne:wght@400;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- GSAP & Barba.js -->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Listing Metadata for dynamic loading -->
+    <script type="application/json" id="listing-data">
+    {
+        "id": "dlf-the-belaire",
+        "title": "DLF The Belaire",
+        "status": "READY TO MOVE",
+        "location": "Golf Course Road",
+        "type": "4 BHK Luxury",
+        "image": "images/property-01.jpg",
+        "price": "₹12.5 Cr Onwards",
+        "area": "4,500 - 6,200 sq.ft.",
+        "bedrooms": 4,
+        "bathrooms": 5,
+        "description": "Experience unparalleled luxury at DLF The Belaire, an iconic residential tower on Golf Course Road. This magnificent property offers breathtaking views of the lush green golf course and features world-class amenities.",
+        "highlights": [
+            "Premium Golf Course Views",
+            "Italian Marble Flooring",
+            "Private Elevator Access",
+            "24/7 Concierge Service",
+            "Temperature-Controlled Pool",
+            "State-of-the-art Fitness Center"
+        ]
+    }
+    </script>
+</head>
+
+<body data-barba="wrapper">
+    <!-- Transition Curtain -->
+    <div class="transition-curtain"></div>
+
+    <div class="noise-overlay"></div>
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="../index.html">KUTUB<span class="logo-accent">ESTATE</span></a>
+        </div>
+        <nav class="desktop-nav">
+            <a href="../index.html#inventory" class="hide-mobile">Properties</a>
+            <a href="../maps.html" class="hide-mobile">Maps</a>
+            <a href="../index.html#contact" class="contact-btn">Contact</a>
+        </nav>
+        <button class="menu-toggle">Menu</button>
+    </header>
+
+    <main class="listing-page" data-barba="container" data-barba-namespace="listing">
+        <section class="listing-hero">
+            <div class="listing-hero-image">
+                <img src="../images/property-01.jpg" alt="DLF The Belaire"
+                    onerror="this.src='https://placehold.co/1600x900/1a1a1a/D8C690?text=Image+Not+Found'">
+            </div>
+            <div class="listing-hero-overlay">
+                <span class="listing-status">READY TO MOVE</span>
+                <h1 class="listing-title">DLF The Belaire</h1>
+                <p class="listing-location">Golf Course Road • Gurugram</p>
+            </div>
+        </section>
+
+        <section class="listing-details">
+            <div class="listing-grid">
+                <div class="listing-main">
+                    <div class="listing-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Configuration</span>
+                            <span class="stat-value">4 BHK Luxury</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Area</span>
+                            <span class="stat-value">4,500 - 6,200 sq.ft.</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Price</span>
+                            <span class="stat-value text-gold">₹12.5 Cr Onwards</span>
+                        </div>
+                    </div>
+
+                    <div class="listing-description">
+                        <h2>About This Property</h2>
+                        <p>Experience unparalleled luxury at DLF The Belaire, an iconic residential tower on Golf Course
+                            Road. This magnificent property offers breathtaking views of the lush green golf course and
+                            features world-class amenities.</p>
+                        <p>Designed for the discerning few who appreciate the finer things in life, each residence is a
+                            masterpiece of architectural excellence and thoughtful design.</p>
+                    </div>
+
+                    <div class="listing-highlights">
+                        <h2>Property Highlights</h2>
+                        <ul class="highlights-grid">
+                            <li>Premium Golf Course Views</li>
+                            <li>Italian Marble Flooring</li>
+                            <li>Private Elevator Access</li>
+                            <li>24/7 Concierge Service</li>
+                            <li>Temperature-Controlled Pool</li>
+                            <li>State-of-the-art Fitness Center</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <aside class="listing-sidebar">
+                    <div class="inquiry-box">
+                        <h3>Interested in this property?</h3>
+                        <p>Our real estate experts are ready to assist you.</p>
+                        <a href="https://wa.me/919999999999?text=Hi, I'm interested in DLF The Belaire"
+                            class="cta-button">WhatsApp Us ↗</a>
+                        <a href="tel:+919999999999" class="cta-button secondary">Call Now</a>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="back-to-collection">
+            <a href="../index.html#inventory">← Back to Collection</a>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h2>Let's talk assets.</h2>
+                <a href="https://wa.me/919999999999" class="huge-link">WhatsApp Us ↗</a>
+            </div>
+            <div class="footer-right">
+                <div class="address-box">
+                    <h4>Visit Us</h4>
+                    <p>41, Akashneem Marg,<br>DLF City Phase 2,<br>Gurugram, Haryana</p>
+                </div>
+                <div class="contact-box">
+                    <h4>Contact</h4>
+                    <p>consult@kutubestate.com</p>
+                    <p>+91 98XXX XXXXX</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 KUTUB ESTATE.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

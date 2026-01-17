@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gurgaon Maps | Kutub Estate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;500;600;700&family=Syne:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <!-- GSAP & Barba.js -->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body data-barba="wrapper">
+    <!-- Transition Curtain -->
+    <div class="transition-curtain"></div>
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="index.html">KUTUB<span class="logo-accent">ESTATE</span></a>
+        </div>
+        <nav class="desktop-nav">
+            <a href="index.html#inventory" class="hide-mobile">Properties</a>
+            <a href="maps.html" class="hide-mobile active">Maps</a>
+            <a href="index.html#contact" class="contact-btn">Contact</a>
+        </nav>
+        <button class="menu-toggle">Menu</button>
+    </header>
+
+    <main class="maps-page" data-barba="container" data-barba-namespace="maps">
+        <section class="maps-hero">
+            <div class="maps-hero-content">
+                <h1 class="maps-title">Gurgaon Area Maps</h1>
+                <p class="maps-subtitle">Navigate DLF Phases with our detailed locality maps</p>
+            </div>
+        </section>
+
+        <section class="maps-gallery">
+            <div class="map-card" onclick="openMap(this)">
+                <div class="map-image">
+                    <img src="images/map-dlf-phase1.png" alt="DLF Phase 1 Map">
+                </div>
+                <div class="map-info">
+                    <h3>DLF Phase I</h3>
+                    <p>The original DLF colony with premium plots and villas</p>
+                </div>
+            </div>
+
+            <div class="map-card" onclick="openMap(this)">
+                <div class="map-image">
+                    <img src="images/map-dlf-phase2.png" alt="DLF Phase 2 Map">
+                </div>
+                <div class="map-info">
+                    <h3>DLF Phase II</h3>
+                    <p>Established residential area with excellent connectivity</p>
+                </div>
+            </div>
+
+            <div class="map-card" onclick="openMap(this)">
+                <div class="map-image">
+                    <img src="images/map-dlf-phase3.png" alt="DLF Phase 3 Map">
+                </div>
+                <div class="map-info">
+                    <h3>DLF Phase III</h3>
+                    <p>Commercial and residential hub near Cyber City</p>
+                </div>
+            </div>
+
+            <div class="map-card" onclick="openMap(this)">
+                <div class="map-image">
+                    <img src="images/map-dlf-phase4.png" alt="DLF Phase 4 Map">
+                </div>
+                <div class="map-info">
+                    <h3>DLF Phase IV</h3>
+                    <p>Sectors 27 & 28 with premium builder floors</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="back-to-home">
+            <a href="index.html">← Back to Home</a>
+        </section>
+    </main>
+
+    <!-- Fullscreen Map Modal -->
+    <div class="map-modal" id="mapModal" onclick="closeMap()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeMap()">×</button>
+            <img id="modalImage" src="" alt="Map">
+        </div>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h2>Let's talk assets.</h2>
+                <a href="https://wa.me/919999999999" class="huge-link">WhatsApp Us ↗</a>
+            </div>
+            <div class="footer-right">
+                <div class="address-box">
+                    <h4>Visit Us</h4>
+                    <p>41, Akashneem Marg,<br>DLF City Phase 2,<br>Gurugram, Haryana</p>
+                </div>
+                <div class="contact-box">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:consult@kutubestate.com">consult@kutubestate.com</a></p>
+                    <p><a href="tel:+919899999999">+91 98XXX XXXXX</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 KUTUB ESTATE.</p>
+        </div>
+    </footer>
+
+    <script>
+        function openMap(card) {
+            const img = card.querySelector('img');
+            document.getElementById('modalImage').src = img.src;
+            document.getElementById('mapModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMap() {
+            document.getElementById('mapModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeMap();
+        });
+    </script>
+</body>
+
+</html>

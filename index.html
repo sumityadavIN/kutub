@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kutub Estate | Architectural Realty</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;500;600;700&family=Syne:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <!-- GSAP & Barba.js -->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body data-barba="wrapper">
+    <!-- Transition Curtain -->
+    <div class="transition-curtain"></div>
+
+    <div class="noise-overlay"></div>
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="index.html">KUTUB<span class="logo-accent">ESTATE</span></a>
+        </div>
+        <nav class="desktop-nav">
+            <a href="#inventory" class="hide-mobile">Properties</a>
+            <a href="maps.html" class="hide-mobile">Maps</a>
+            <a href="#contact" class="contact-btn">Contact</a>
+        </nav>
+        <button class="menu-toggle">Menu</button>
+    </header>
+
+    <main data-barba="container" data-barba-namespace="home">
+        <section id="home" class="hero">
+            <video class="hero-video" autoplay muted loop playsinline poster="images/property-01.jpg">
+                <source src="images/hero-video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p class="hero-meta">Premium Real Estate Since 1991</p>
+                <h1 class="hero-title">
+                    <span class="title-line">Curating</span>
+                    <span class="title-line accent">Exceptional</span>
+                    <span class="title-line">Properties</span>
+                </h1>
+                <p class="hero-tagline">Where architectural excellence meets uncompromising luxury in Gurugram's most
+                    coveted addresses.</p>
+                <a href="#inventory" class="hero-cta">Explore Collection</a>
+            </div>
+            <div class="scroll-cue">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+        </section>
+
+        <section class="big-statement fade-up">
+            <p>We don't just facilitate.<span class="accent">We curate lifestyles.</span></p>
+        </section>
+
+        <div class="ticker-wrap">
+            <div class="ticker">
+                <div class="ticker-block">
+                    <span class="item">DLF PHASE 1 & 2</span><span class="separator">/</span>
+                    <span class="item">SUSHANT LOK</span><span class="separator">/</span>
+                    <span class="item">THE CAMELLIAS</span><span class="separator">/</span>
+                    <span class="item">SOUTH CITY</span><span class="separator">/</span>
+                    <span class="item">ROSEWOOD CITY</span><span class="separator">/</span>
+                    <span class="item">DLF THE CREST</span><span class="separator">/</span>
+                </div>
+                <div class="ticker-block">
+                    <span class="item">DLF PHASE 1 & 2</span><span class="separator">/</span>
+                    <span class="item">SUSHANT LOK</span><span class="separator">/</span>
+                    <span class="item">THE CAMELLIAS</span><span class="separator">/</span>
+                    <span class="item">SOUTH CITY</span><span class="separator">/</span>
+                    <span class="item">ROSEWOOD CITY</span><span class="separator">/</span>
+                    <span class="item">DLF THE CREST</span><span class="separator">/</span>
+                </div>
+            </div>
+        </div>
+
+        <section id="inventory" class="inventory">
+            <div class="section-head">
+
+                <h2>Curated Assets</h2>
+            </div>
+
+            <div class="property-list" id="property-list">
+                <!-- Properties will be dynamically loaded from /listing/listings.json -->
+                <!-- Fallback static content for non-JS browsers -->
+                <noscript>
+                    <article class="prop-item">
+                        <div class="prop-meta">
+                            <span class="status">READY TO MOVE</span>
+                            <h3>DLF The Belaire</h3>
+                            <p>Golf Course Road • 4 BHK Luxury</p>
+                        </div>
+                        <div class="prop-image">
+                            <img src="images/property-01.jpg" alt="Belaire">
+                        </div>
+                        <div class="prop-action">
+                            <a href="listing/dlf-the-belaire.html">View Details ↗</a>
+                        </div>
+                    </article>
+                    <article class="prop-item">
+                        <div class="prop-meta">
+                            <span class="status">UNDER CONSTRUCTION</span>
+                            <h3>DLF The Crest</h3>
+                            <p>Park Drive • Penthouse Collection</p>
+                        </div>
+                        <div class="prop-image">
+                            <img src="images/property-02.jpg" alt="Crest">
+                        </div>
+                        <div class="prop-action">
+                            <a href="listing/dlf-the-crest.html">View Details ↗</a>
+                        </div>
+                    </article>
+                </noscript>
+            </div>
+        </section>
+
+
+
+        <a href="maps.html" class="mobile-map-link">View Gurgaon Maps →</a>
+
+        <section class="partners">
+            <div class="section-head-small">
+
+            </div>
+            <div class="brand-slider">
+                <div class="brand-track">
+                    <img src="images/logo-dlf.jpg" alt="DLF">
+                    <img src="images/logo-emaar.webp" alt="Emaar">
+                    <img src="images/logo-m3m.png" alt="M3M">
+                    <img src="images/logo-godrej.jpg" alt="Godrej">
+                    <img src="images/logo-adani.png" alt="Adani">
+                    <img src="images/logo-centralpark.png" alt="Central Park">
+                    <img src="images/logo-suncity.png" alt="Suncity">
+                    <img src="images/logo-ansal.jpg" alt="Ansal">
+
+                    <img src="images/logo-dlf.jpg" alt="DLF">
+                    <img src="images/logo-emaar.webp" alt="Emaar">
+                    <img src="images/logo-m3m.png" alt="M3M">
+                    <img src="images/logo-godrej.jpg" alt="Godrej">
+                    <img src="images/logo-adani.png" alt="Adani">
+                    <img src="images/logo-centralpark.png" alt="Central Park">
+                    <img src="images/logo-suncity.png" alt="Suncity">
+                    <img src="images/logo-ansal.jpg" alt="Ansal">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h2>Let's talk assets.</h2>
+                <a href="https://wa.me/919999999999" class="huge-link">WhatsApp Us ↗</a>
+            </div>
+
+            <div class="footer-col footer-contact">
+                <h4>Visit Us</h4>
+                <p><a href="https://maps.google.com/?q=28.4700,77.0900" target="_blank">41, Akashneem Marg,<br>DLF City
+                        Phase 2,<br>Gurugram, Haryana</a></p>
+                <div class="footer-icons">
+                    <a href="tel:+919899999999" title="Call Us">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                    </a>
+                    <a href="mailto:consult@kutubestate.com" title="Email Us">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/kutubestate" target="_blank" title="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col footer-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.5!2d77.09!3d28.47!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI4JzEyLjAiTiA3N8KwMDUnMjQuMCJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
+                    width="100%" height="180"
+                    style="border:0; filter: grayscale(100%) invert(92%) contrast(83%); border-radius: 8px;"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+        </svg>
+        </a>
+        </div>
+        </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 KUTUB ESTATE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
